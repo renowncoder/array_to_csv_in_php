@@ -1,32 +1,15 @@
 <?php
 
-include 'writeAvailableCommands.php';
+include 'config.php';
+$array = include 'array.php';
 
 if (1 == $argc) {
-    fwrite(STDOUT, 'Welcome to PHP Converter App'."\n\n");
-    writeAvailableCommands();
+    fwrite(STDOUT, 'Welcome to PHP Converter App'."\n");
+    $options = new Commands();
+    $options->writeAvailableCommands();
 
     return;
 }
-
-// Our array of data
-$array = [
-  [
-      'first_name' => 'Kiestis',
-      'age' => 29,
-      'gender' => 'male',
-  ],
-  [
-      'first_name' => 'Vytska',
-      'age' => 32,
-      'gender' => 'male',
-  ],
-  [
-      'first_name' => 'Karina',
-      'age' => 25,
-      'gender' => 'female',
-  ],
-];
 
 switch ($argv[1]) {
     //Save as CSV
@@ -38,9 +21,8 @@ switch ($argv[1]) {
     } else {
         $file = $argv[2];
 
-        require_once 'outputCSV.php';
-        //Call the function
-        outputCSV($file, $array);
+        $makeCsv = new CreateCsvFile();
+        $makeCsv->outputCsv($file, $array);
     }
     break;
 
@@ -52,9 +34,9 @@ switch ($argv[1]) {
         return;
     } else {
         $file = $argv[2];
-        require_once 'outputJSON.php';
-        //Call the funciton
-        outputJSON($file, $array);
+
+        $makeJson = new CreateJsonFile();
+        $makeJson->outputJson($file, $array);
     }
     break;
 

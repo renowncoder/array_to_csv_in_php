@@ -46,4 +46,3 @@ Programos konfiguraciją leidžiama saugoti bet kokiu budu (env, yaml, php,...).
 
 Prieš darant rekomenduoju susipažinti su SOLID, DRY, KISS, MVC, Hexagonal 
 (a.k.a. Ports and Adapters) architecture, Factory design patternų.
-
