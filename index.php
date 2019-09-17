@@ -1,5 +1,6 @@
 <?php
 
+//Our array of data
 $array = 
   [
     [
@@ -19,6 +20,7 @@ $array =
     ],
 ];
 
+//Function to create CSV file from array
 function outputCsv($file, $array)
 {
   header('Content-Type: text/csv');
@@ -34,5 +36,6 @@ function outputCsv($file, $array)
   fclose($fh);
 }
 
+//Call the function
 outputCsv('Our Data.csv', $array);
 
