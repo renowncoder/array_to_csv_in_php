@@ -1,20 +1,12 @@
 <?php
 
 // Class autoloader function
-spl_autoload_register('myAutoLoader');
-  function myAutoLoader($className)
-  {
-      /**
-       *  Change this line, if you move all.
-       *  classes to different folder.
-       */
-      $path = 'classes/';
+define('ROOT', __DIR__.DIRECTORY_SEPARATOR);
+define('CLASSES', ROOT.'classes'.DIRECTORY_SEPARATOR);
 
-      $extension = '.php';
-      $fullPath = $path.$className.$extension;
-
-      if (!file_exists($fullPath)) {
-          return false;
-      }
-      include_once $fullPath;
-  }
+spl_autoload_register(function ($class) {
+    $file = CLASSES.str_replace('\\', '/', $class).'.php';
+    if (file_exists($file)) {
+        require $file;
+    }
+});

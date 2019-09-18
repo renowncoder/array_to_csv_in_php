@@ -5,11 +5,11 @@ class CreateCsvFile
     // Function to convert our array to CSV file
     public function outputCsv($file, $array)
     {
-        /**  We can initiate a variable, that holds the
-         *   extension of the file, that way, user can
-         *   simply enter name of the file, no need to
-         *   think about extension.
-         */
+        /* We can initiate a variable, that holds the
+           extension of the file, that way, user can
+           simply enter name of the file, no need to
+           think about extension
+        */
         $extension = '.csv';
 
         $fh = fopen($file.$extension, 'w') or die("can't open file");

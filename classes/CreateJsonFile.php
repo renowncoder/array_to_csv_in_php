@@ -5,11 +5,11 @@ class CreateJsonFile
     // Function to convert our array to JSON file
     public function outputJson($file, $array)
     {
-        /** We can initiate a variable, that holds the
-         *  extension of the file, that way, user can
-         *  simply enter name of the file, no need to
-         *  think about extension.
-         */
+        /* We can initiate a variable, that holds the
+           extension of the file, that way, user can
+           simply enter name of the file, no need to
+           think about extension
+        */
         $extension = '.json';
 
         $fp = fopen($file.$extension, 'w');

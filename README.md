@@ -1,3 +1,5 @@
+# PHP CLI ARRAY to CSV or JSON
+
 Reikia parašyti mini programėlę, kuri gali išsaugoti duomenis 
 iš asociatyvinio masyvo (žemiau pateiktas masyvo pvz.) į failą.
 
@@ -30,19 +32,24 @@ Duomenų pvz.:
 ]
 ```
 
-### Bendrieji reikalavimai
+### Kaip paleisti programą:
 
-Trečiųjų šalių frameworkų ir libų naudojimas draudžiamas.
+```
+Paleisti serverį per MAMP arba XAMPP,
+```
 
-Būtina naudoti kodo versijavimo sistemą (VCS), koda pateikti 
-galima per Bitbucket, GitHub ar GitLab. Commitai turi tureti prasmingus komentarus.
+```
+clone repo using git@github.com:dimacellist/array_to_csv_in_php.git,
+```
 
-Kodas turi būti rašomas laikantis PSR-1 ir PSR-2.
+```
+Atidaryti Terminal,
+```
 
-Būtina taikyti SOLID, nepamirštam DRY bei KISS.
-Privaloma komentuoti kodą (minimum bent blokais) bei privaloma rašyti PHP Doc.
-Visi php failai turi būti loadinami dinamiškai (naudojamas autoloaderis taikant PSR-4, composer naudoti negalima).
-Programos konfiguraciją leidžiama saugoti bet kokiu budu (env, yaml, php,...).
+```
+php index.php
+```
 
-Prieš darant rekomenduoju susipažinti su SOLID, DRY, KISS, MVC, Hexagonal 
-(a.k.a. Ports and Adapters) architecture, Factory design patternų.
+Sekti programos instrukcijas
+
+Happy Hacking!

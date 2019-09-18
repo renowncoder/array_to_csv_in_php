@@ -1,6 +1,6 @@
 <?php
 
-include 'config.php';
+require 'config.php';
 $array = include 'array.php';
 
 if (1 == $argc) {
