@@ -47,7 +47,7 @@ Atidaryti Terminal,
 ```
 
 ```
-php index.php
+php app/index.php
 ```
 
 Sekti programos instrukcijas

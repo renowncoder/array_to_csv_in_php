@@ -1,7 +1,14 @@
 <?php
 
+require 'app/classes/Commands.php';
+require 'app/classes/CreateCsvFile.php';
+require 'app/classes/CreateJsonFile.php';
+
+use App\Classes\Commands;
+use App\Classes\CreateCsvFile;
+use App\Classes\CreateJsonFile;
+
 require 'config.php';
-$array = include 'array.php';
 
 if (1 == $argc) {
     fwrite(STDOUT, 'Welcome to PHP Converter App'."\n");
