@@ -10,7 +10,7 @@ class Commands
         */
         $text = 'php index.php';
         fwrite(STDOUT, 'Available commads:'."\n");
-        fwrite(STDOUT, "$text saveCSV - saves in CSV format"."\n");
-        fwrite(STDOUT, "$text saveJSON - saves in JSON format"."\n");
+        fwrite(STDOUT, "$text saveCSV filename - saves in CSV format"."\n");
+        fwrite(STDOUT, "$text saveJSON filename - saves in JSON format"."\n");
     }
 }
